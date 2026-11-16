@@ -117,7 +117,7 @@ function loadTasks() {
   let recoveredData = localStorage.getItem("savedTasks");
   let recoveredArray = JSON.parse(recoveredData);
 
-  if (recoveredArray.length === 0) {
+  if (recoveredArray.length === 0 || !recoveredArray) {
     return;
   }
 
